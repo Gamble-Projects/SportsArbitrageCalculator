@@ -37,8 +37,8 @@ The inputs are Event One and Event Two odds (inputed by user).
            
             ans = 1 - ((1/(e1+1)) + (1/(e2+1)))
             totalPercent = 1/((e1+1)) + 1/((e2+1))
-            e1Percentage = (1/((e1+1)))/totalPercent
-            e2Percentage = (1/((e2+1)))/totalPercent
+            e1Percentage = (1/(e1+1))/totalPercent
+            e2Percentage = (1/(e2+1))/totalPercent
            
             
         } else if arbSystemArbType == "Frac"{
