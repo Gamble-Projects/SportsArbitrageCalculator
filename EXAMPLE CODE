@@ -12,10 +12,10 @@ The inputs are Event One and Event Two odds (inputed by user).
         
         if arbSystemArbType == "Dec" {
             
-            ans = 1 - ((1/((e1-1)+1)) + (1/((e2-1)+1)))
-            totalPercent = (1/(((e1-1)+1))) + (1/(((e2-1)+1)))
-            e1Percentage = (1/(((e1-1)+1)))/totalPercent
-            e2Percentage = (1/(((e2-1)+1)))/totalPercent
+            ans = 1 - (1/e1 + 1/e2)
+            totalPercent = 1/e1 + 1/e2
+            e1Percentage = (1/e1)/totalPercent
+            e2Percentage = (1/e2)/totalPercent
 
             
         } else if arbSystemArbType == "Ml" {
@@ -36,7 +36,7 @@ The inputs are Event One and Event Two odds (inputed by user).
             }
            
             ans = 1 - ((1/(e1+1)) + (1/(e2+1)))
-            totalPercent = (1/((e1+1))) + (1/((e2+1)))
+            totalPercent = 1/((e1+1)) + 1/((e2+1))
             e1Percentage = (1/((e1+1)))/totalPercent
             e2Percentage = (1/((e2+1)))/totalPercent
            
@@ -44,9 +44,9 @@ The inputs are Event One and Event Two odds (inputed by user).
         } else if arbSystemArbType == "Frac"{
             
             ans = 1 - ((1/(e1+1)) + (1/(e2+1)))
-            totalPercent = (1/((e1+1))) + (1/((e2+1)))
-            e1Percentage = (1/((e1+1)))/totalPercent
-            e2Percentage = (1/((e2+1)))/totalPercent
+            totalPercent = 1/(e1+1) + 1/(e2+1)
+            e1Percentage = (1/(e1+1))/totalPercent
+            e2Percentage = (1/(e2+1))/totalPercent
         } else {
             print("ERROR")
         }
