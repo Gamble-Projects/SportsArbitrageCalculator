@@ -1,8 +1,8 @@
 Here is the brain behind the calculator. It calculats arbitrage based on the 3 various odds types "Dec" = Decimal "Ml" = Money Line and "Frac" = Fractional.
 The inputs are simply the Event One and Event Two odds in whichever odds type the user input. 
 
-ANS displays the percentage of Arbitrage that exists.
-e1Percentage and e2Percentage display what percentage of your wager you need to place on each event to capitalize off of the arbitrage opportunity.
+"ans" displays the percentage of Arbitrage that exists.
+"e1Percentage" and "e2Percentage" display what percentage of your wager you need to place on each event to capitalize off of the arbitrage opportunity.
 
 
   mutating func calculateArbitrage(eventOneOddsValue: String, eventTwoOddsValue: String){
