@@ -1,0 +1,49 @@
+Here is the brain behind the calculator. It calculats arbitrage based on the 3 various odds types "Dec" = Decimal "Ml" = Money Line and "Frac" = Fractional.
+The inputs are simply the Event One and Event Two odds in whichever odds type the user inpute. 
+
+  mutating func calculateArbitrage(eventOneOddsValue: String, eventTwoOddsValue: String){
+        
+        var e1 = Float(eventOneOddsValue) ?? 0.0
+        var e2 = Float(eventTwoOddsValue) ?? 0.0
+        
+        if arbSystemArbType == "Dec" {
+            
+            ans = 1 - ((1/((e1-1)+1)) + (1/((e2-1)+1)))
+            totalPercent = (1/(((e1-1)+1))) + (1/(((e2-1)+1)))
+            e1Percentage = (1/(((e1-1)+1)))/totalPercent
+            e2Percentage = (1/(((e2-1)+1)))/totalPercent
+
+            
+        } else if arbSystemArbType == "Ml" {
+            if e1 >= 100 {
+                e1 = e1/100
+                if e2 >= 100 {
+                    e2 = e2/100
+                } else if e2 < 100 {
+                    e2 = 100/(e2 * (-1))
+                }
+            } else if e1 < 100 {
+                e1 = 100/(e1 * (-1))
+                if e2 >= 100 {
+                    e2 = e2/100
+                } else if e2 < 100 {
+                    e2 = 100/(e2 * (-1))
+                }
+            }
+           
+            ans = 1 - ((1/(e1+1)) + (1/(e2+1)))
+            totalPercent = (1/((e1+1))) + (1/((e2+1)))
+            e1Percentage = (1/((e1+1)))/totalPercent
+            e2Percentage = (1/((e2+1)))/totalPercent
+           
+            
+        } else if arbSystemArbType == "Frac"{
+            
+            ans = 1 - ((1/(e1+1)) + (1/(e2+1)))
+            totalPercent = (1/((e1+1))) + (1/((e2+1)))
+            e1Percentage = (1/((e1+1)))/totalPercent
+            e2Percentage = (1/((e2+1)))/totalPercent
+        } else {
+            print("ERROR")
+        }
+    }
