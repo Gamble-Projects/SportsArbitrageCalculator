@@ -1,7 +1,7 @@
-Here is the brain behind the calculator. It calculats arbitrage based on the 3 various odds types "Dec" = Decimal "Ml" = Money Line and "Frac" = Fractional.
-The inputs are simply the Event One and Event Two odds in whichever odds type the user input. 
+Here is the brain behind the calculator. It calculates arbitrage based on the 3 various odds types "Dec" = Decimal "Ml" = Money Line and "Frac" = Fractional.
+The inputs are Event One and Event Two odds (inputed by user).
 
-"ans" displays the percentage of Arbitrage that exists.
+"ans" displays the percentage of Arbitrage that exists (assuming there is any)
 "e1Percentage" and "e2Percentage" display what percentage of your wager you need to place on each event to capitalize off of the arbitrage opportunity.
 
 
